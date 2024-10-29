@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="phimSapChieu.css">
+    <link rel="stylesheet" href="Font/fontawesome-free-6.6.0-web/css/all.min.css">
+    <title>Phim Sắp Chiếu</title>
+    <!-- <style>
+        body {
+            background-color: #eee;
+            margin: 0;
+            font-family: "Be Vietnam Pro", sans-serif;
+        }
+
+        .Login {
+            background-color: black;
+            color: white;
+            padding: 10px 0;
+            text-align: right;
+            padding-right: 20px;
+        }
+
+        .Login a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            display: grid;
+            grid-template-columns: 15% 15% 70%;
+            border-bottom: 2px solid rgb(143, 142, 142);
+            background-color: rgb(255, 255, 255);
+            z-index: 1000;
+        }
+
+        .header_img {
+            width: 100px;
+            height: 70px;
+            margin-left: 30px;
+        }
+
+        .header-select {
+            height: max-content;
+            width: max-content;
+            border-radius: 10px;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .header_menu {
+            list-style-type: none;
+            display: grid;
+            grid-template-columns: repeat(7, auto);
+            margin-top: 20px;
+            padding: 0;
+            text-align: center;
+        }
+
+        .header_menu>li>a {
+            text-decoration: none;
+            font-weight: bold;
+            color: black;
+            font-size: large;
+        }
+
+        .header_menu>li:hover a {
+            color: #09f;
+        }
+
+        .dangKy,
+        .dangNhap {
+            border-bottom: 1px solid black;
+        }
+
+        .dangKy:hover {
+            border-bottom: 1px solid white;
+        }
+
+        .dangNhap:hover {
+            border-bottom: 1px solid white;
+        }
+
+        h3 {
+            margin-top: 3%;
+            margin-left: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        .content_img {
+            width: 300px;
+            height: 450px;
+            border-radius: 10px;
+            float: left;
+            margin-left: 10px;
+        }
+
+        .text_content {
+            margin-left: 350px;
+        }
+
+        h2 {
+            font-size: 30px;
+
+        }
+
+        .mieuTa {
+            font-size: 20px;
+        }
+
+        ul {
+            padding-left: 0px;
+        }
+
+        .text_menu {
+            display: flex;
+            font-size: 20px;
+        }
+
+        .menu2 {
+            margin-left: 10%;
+        }
+
+        .trangChu1,
+        .trangChu2 {
+            font-size: 30px;
+        }
+
+        .trangChu2 {
+            color: #09f;
+        }
+
+        .trailer {
+            background-color: #337ab7;
+            margin-top: 12%;
+            text-align: center;
+        }
+
+        li {
+            margin-top: 5px;
+        }
+
+        footer {
+            border-top: 2px solid #bbb;
+        }
+
+        footer>table {
+            display: grid;
+            justify-content: center;
+            margin-right: 30px;
+            border-spacing: 100px 50px;
+        }
+
+        .thead>td {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .tbody>td>a {
+            font-size: 20px;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .tbody_td3 i {
+            font-size: 55px;
+        }
+
+        .tbody_td4>p {
+            font-size: 20px;
+        }
+
+        .tbody_td4>p:hover {
+            text-decoration: none;
+        }
+
+        #icon_fb {
+            color: #09f;
+        }
+
+        #icon_yt {
+            color: red;
+        }
+
+        #icon_ins {
+            background: radial-gradient(circle at 30% 110%,
+                    #ffdb8b 0%,
+                    #ee653d 25%,
+                    #d42e81 50%,
+                    #a237b6 75%,
+                    #3e57bc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        #icon_tw {
+            color: #000;
+        }
+    </style> -->
+</head>
+
+<body>
+    <div class="Login">
+        <span><a href="/Layout/Sign-in.html" class="dangKy">Đăng ký</a></span> | <span><a href="/Layout/Sign-in.html"
+                class="dangNhap">Đăng nhập</a></span>
+    </div>
+
+    <header>
+        <img class="header_img" src="LogoWeb.webp" alt="Ảnh Logo">
+        <select class="header-select" name="select" id="select">
+            <option value="G3HN">Group3 Hà Nội</option>
+            <option value="G3TN">Group3 Thái Nguyên</option>
+            <option value="G3TH">Group3 Thanh Hóa</option>
+            <option value="G3LC">Group3 Lào Cai</option>
+            <option value="G3BG">Group3 Bắc Giang</option>
+            <option value="G3NT">Group3 Nha Trang</option>
+        </select>
+        <div class="header_menu">
+            <div class="menu_item"><a href="/Web_TTCSN/index1.html">LỊCH CHIẾU THEO RẠP</a></div>
+            <div class="menu_item"><a href="/phim/phimdangchieu.html">PHIM</a></div>
+            <div class="menu_item"><a href="/WebsiteDatVeXemPhimTTCSN/Rap_final.html">RẠP</a></div>
+            <div class="menu_item"><a href="/WebsiteDatVeXemPhimTTCSN/GiaVe.html">GIÁ VÉ</a></div>
+            <div class="menu_item"><a href="/phim/tintuc.html">TIN MỚI VÀ ƯU ĐÃI</a></div>
+            <!-- <div class="menu_item"><a href="">NHƯỢNG QUYỀN</a></div> -->
+            <div class="menu_item"><a href="/Layout/Sign-in.html">THÀNH VIÊN</a></div>
+        </div>
+    </header>
+    <div class="content">
+        <h3><span class="trangChu1">Trang chủ > </span><span class="trangChu2">Thiên Đường Quả Báo</span></h3>
+        <div class="content1">
+            <img class="content_img" src="AnhPhimTDQB.png" alt="Ảnh phim">
+            <div class="text_content">
+                <h2>THIÊN ĐƯỜNG QUẢ BÁO</h2>
+                <p class="mieuTa">Cặp đôi đồng tính chưa kết hôn cùng nhau xây dựng nhà cửa, trang trại sầu riêng. Sau
+                    cái chết bất ngờ
+                    của một <br>
+                    người, gia đình anh ta tịch thu tài sản do không được công nhận là vợ chồng hợp pháp. Người bạn đời
+                    còn <br>
+                    sống đấu tranh để đòi lại tài sản chung và công việc cả đời của họ. <br></p>
+                <div class="text_menu">
+                    <ul class="menu1">
+                        <li><span>ĐẠO DIỄN:</span></li>
+                        <li><span>DIỄN VIÊN:</span></li>
+                        <li><span>THỂ LOẠI:</span></li>
+                        <li><span>THỜI LƯỢNG:</span></li>
+                        <li><span>NGÔN NGỮ:</span></li>
+                        <li><span>NGÀY KHỞI CHIẾU:</span></li>
+                    </ul>
+                    <ul class="menu2">
+                        <li><span>Naruebet Kuno</span></li>
+                        <li><span>Jeff Satur, Engfa Waraha, Srida Puapimol</span></li>
+                        <li><span>Kịch, Hồi Hộp</span></li>
+                        <li><span>100 phút</span></li>
+                        <li><span>Tiếng Thái</span></li>
+                        <li><span>11/11/2024</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="trailer">
+        <h3 style="color: white;font-size: 30px;">TRAILER</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/hXOgMsyZxxk?si=XWI6gSLoQBLQgbJE"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <!-- <footer>
+        <table>
+            <tr class="thead">
+                <td>Group3 Việt Nam</td>
+                <td>Điều khoản sử dụng</td>
+                <td>Kết nối với chúng tôi</td>
+                <td>Chăm sóc khách hàng</td>
+            </tr>
+            <tr class="tbody">
+                <td class="tbody_td1">
+                    <a href="" target="_self">Giới thiệu</a><br>
+                    <a href="" target="_self">Tiện Ích Online</a><br>
+                    <a href="" target="_self">Thẻ Quà Tặng</a><br>
+                    <a href="" target="_self">Tuyển Dụng</a><br>
+                    <a href="" target="_self">Liên Hệ Quảng Cáo Group3</a><br>
+                    <a href="" target="_self">Dành cho đối tác</a><br>
+                </td>
+                <td class="tbody_td2">
+                    <a href="" target="_self">Điều Khoản Chung</a><br>
+                    <a href="" target="_self">Điều Khoản Giao Dịch</a><br>
+                    <a href="" target="_self">Chính Sách Thanh Toán</a><br>
+                    <a href="" target="_self">Chính Sách Bảo Mật</a><br>
+                    <a href="" target="_self">Câu Hỏi Thường Gặp</a><br>
+                </td>
+                <td class="tbody_td3">
+                    <a href="https://www.facebook.com/profile.php?id=100051846793935" target="_blank"><i id="icon_fb"
+                            class="fa-brands fa-square-facebook"></i></a>
+                    <i id="icon_yt" class="fa-brands fa-square-youtube"></i>
+                    <i id="icon_ins" class="fa-brands fa-square-instagram"></i>
+                    <i id="icon_tw" class="fa-brands fa-square-x-twitter"></i>
+                </td>
+                <td class="tbody_td4">
+                    <p>
+                        Hotline: 1900 6017<br>
+                        Giờ làm việc: 8:00 - 22:00 (Tất cả các ngày<br>
+                        bao gồm cả Lễ Tết)<br>
+                        Email hỗ trợ: hoidap@group3.vn
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </footer> -->
+    <!-- <div class="footer_container">
+        <div class="inner_footer">
+            <div class="footer_group">
+                <h2>Group3 Việt Nam</h2>
+                <div class="list_links">
+                    <a href="" target="_self">Giới thiệu</a><br>
+                    <a href="" target="_self">Tiện Ích Online</a><br>
+                    <a href="" target="_self">Thẻ Quà Tặng</a><br>
+                    <a href="" target="_self">Tuyển Dụng</a><br>
+                    <a href="" target="_self">Liên Hệ Quảng Cáo Group3</a><br>
+                    <a href="" target="_self">Dành cho đối tác</a><br>
+                </div>
+            </div>
+            <div class="footer_group">
+                <h2>Điều khoản sử dụng</h2>
+                <div class="list_links">
+                    <a href="" target="_self">Điều Khoản Chung</a><br>
+                    <a href="" target="_self">Điều Khoản Giao Dịch</a><br>
+                    <a href="" target="_self">Chính Sách Thanh Toán</a><br>
+                    <a href="" target="_self">Chính Sách Bảo Mật</a><br>
+                    <a href="" target="_self">Câu Hỏi Thường Gặp</a><br>
+                </div>
+            </div>
+            <div class="footer_group">
+                <h2>Kết nối với chúng tôi</h2>
+                <div class="list_links">
+                    <a href="https://www.facebook.com/profile.php?id=100051846793935" target="_blank"><i id="icon_fb"
+                            class="fa-brands fa-square-facebook"></i></a>
+                    <i id="icon_yt" class="fa-brands fa-square-youtube"></i>
+                    <i id="icon_ins" class="fa-brands fa-square-instagram"></i>
+                    <i id="icon_tw" class="fa-brands fa-square-x-twitter"></i>
+                </div>
+            </div>
+            <div class="footer_group">
+                <h2>Chăm sóc khách hàng</h2>
+                <div class="list_links">
+                    <p>
+                        Hotline: 1900 6017<br>
+                        Giờ làm việc: 8:00 - 22:00 (Tất cả các ngày<br>
+                        bao gồm cả Lễ Tết)<br>
+                        Email hỗ trợ: hoidap@group3.vn
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column footer-introduce">
+                <h3>Group3 Việt Nam</h3>
+                <div><i class="fa-solid fa-arrow-right"></i><a href="#" target="_self">Giới thiệu</a></div>
+                <div><i class="fa-solid fa-arrow-right"></i><a href="#" target="_self">Tiện Ích Online</a></div>
+                <div><i class="fa-solid fa-arrow-right"></i><a href="#" target="_self">Thẻ Quà Tặng</a></div>
+                <div><i class="fa-solid fa-arrow-right"></i><a href="#" target="_self">Tuyển Dụng</a></div>
+                <div><i class="fa-solid fa-arrow-right"></i><a href="#" target="_self">Liên Hệ Quảng Cáo Group3</a>
+                </div>
+                <div><i class="fa-solid fa-arrow-right"></i><a href="#" target="_self">Dành cho đối tác</a></div>
+            </div>
+
+            <div class="footer-column footer-introduce">
+                <h3>Điều khoản sử dụng</h3>
+                <div><i class="fa-solid fa-arrow-right"></i><a href="#" target="_self">Điều Khoản Chung</a></div>
+                <div><i class="fa-solid fa-arrow-right"></i><a href="#" target="_self">Điều Khoản Giao Dịch</a></div>
+                <div><i class="fa-solid fa-arrow-right"></i><a href="#" target="_self">Chính Sách Thanh Toán</a></div>
+                <div><i class="fa-solid fa-arrow-right"></i><a href="#" target="_self">Chính Sách Bảo Mật</a></div>
+                <div><i class="fa-solid fa-arrow-right"></i><a href="#" target="_self">Câu Hỏi Thường Gặp</a></div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Kết nối với chúng tôi</h3>
+                <i id="inner-icon-facebook" class="fa-brands fa-square-facebook"></i>
+                <i id="inner-icon-youtobe" class="fa-brands fa-square-youtube"></i>
+                <i id="inner-icon-instagram" class="fa-brands fa-square-instagram"></i>
+                <i id="inner-icon-twitter" class="fa-brands fa-square-x-twitter"></i>
+            </div>
+
+            <div class="footer-column">
+                <h3>Chăm sóc khách hàng</h3>
+                <p>
+                    Hotline: 1900 6017<br>
+                    Giờ làm việc: 8:00 - 22:00 (Tất cả các ngày<br>
+                    bao gồm cả Lễ Tết)<br>
+                    Email hỗ trợ: hoidap@group3.vn
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

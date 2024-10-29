@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lịch chiếu theo rạp</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="Font/fontawesome-free-6.6.0-web/css/all.min.css">
+    <!-- <style>
+        header {
+            display: grid;
+            grid-template-columns: 15% 15% 70%;
+            border-bottom: 2px solid rgb(143, 142, 142);
+        }
+
+        .header_img {
+            width: 100px;
+            height: 70px;
+            margin-left: 30px;
+        }
+
+        .header-select {
+            height: max-content;
+            width: max-content;
+            border-radius: 10px;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .header_menu {
+            list-style-type: none;
+            display: grid;
+            grid-template-columns: auto auto auto auto auto auto auto;
+            margin-top: 20px;
+        }
+
+        .header_menu>li>a {
+            text-decoration: none;
+            font-weight: bold;
+            color: black;
+            font-size: large;
+            font-family: Arial;
+        }
+
+        .header_menu>li :hover {
+            color: rgb(95, 95, 152);
+        }
+
+        .span1 {
+            font-size: 44px;
+        }
+
+        .span2 {
+            font-size: 16px;
+        }
+
+        .nav_menu {
+            list-style-type: none;
+            display: grid;
+            grid-template-columns: 15% 15% 15% 15%;
+            margin-top: 10px;
+            border-bottom: 1px solid rgb(143, 142, 142);
+            margin-left: 10%;
+            width: 80%;
+        }
+
+        .nav_menu>li>a {
+            text-decoration: none;
+            font-weight: 500;
+            color: black;
+            font-family: Arial;
+        }
+
+        .nav_menu>li>a:active {
+            color: rgb(134, 134, 234);
+        }
+
+        .content {
+            display: flex;
+            margin-left: 10%;
+        }
+
+        .content1_1 {
+            width: 300px;
+            height: 500px;
+            border-radius: 20px;
+        }
+
+        .content2 {
+            margin-left: 2%
+        }
+
+        .content_tenPhim {
+            margin-top: 5px;
+            color: rgb(39, 39, 187);
+            font-size: 40px;
+            font-weight: bold;
+            border-bottom: 3px solid white;
+        }
+
+        .content_tenPhim:hover {
+            cursor: pointer;
+            color: rgb(227, 17, 17);
+            border-bottom: 3px solid rgb(227, 17, 17);
+            transition: color 0.2s ease;
+        }
+
+        .content2_1_1 {
+            display: flex;
+            margin-top: 0px;
+        }
+
+        .content2_1_1_1_1 {
+            border: 1px solid black;
+            border-radius: 5px;
+            background-color: #999;
+            width: 55px;
+            height: 30px;
+            font-weight: 700;
+            font-size: 20px;
+            margin-left: 12px;
+        }
+
+        .content2_1_1_1_1:hover {
+            cursor: pointer;
+            color: rgb(210, 46, 46);
+            transition: color 0.2s ease;
+        }
+
+        .content2_1_1_2 {
+            margin-left: 10px;
+        }
+    </style> -->
+</head>
+
+<body>
+    <div class="Login">
+        <span><a href="/Layout/Sign-in.html" class="dangKy">Đăng ký</a></span> | <span><a href="/Layout/Sign-in.html"
+                class="dangNhap">Đăng nhập</a></span>
+    </div>
+
+    <header>
+        <img class="header_img" src="LogoWeb.webp" alt="Ảnh Logo">
+        <select class="header-select" name="select" id="select">
+            <option value="G3HN">Group3 Hà Nội</option>
+            <option value="G3TN">Group3 Thái Nguyên</option>
+            <option value="G3TH">Group3 Thanh Hóa</option>
+            <option value="G3LC">Group3 Lào Cai</option>
+            <option value="G3BG">Group3 Bắc Giang</option>
+            <option value="G3NT">Group3 Nha Trang</option>
+        </select>
+        <div class="header_menu">
+            <div class="menu_item"><a href="/Web_TTCSN/index1.html">LỊCH CHIẾU THEO RẠP</a></div>
+            <div class="menu_item"><a href="/phim/phimdangchieu.html">PHIM</a></div>
+            <div class="menu_item"><a href="/WebsiteDatVeXemPhimTTCSN/Rap_final.html">RẠP</a></div>
+            <div class="menu_item"><a href="/WebsiteDatVeXemPhimTTCSN/GiaVe.html">GIÁ VÉ</a></div>
+            <div class="menu_item"><a href="/phim/tintuc.html">TIN MỚI VÀ ƯU ĐÃI</a></div>
+            <!-- <div class="menu_item"><a href="">NHƯỢNG QUYỀN</a></div> -->
+            <div class="menu_item"><a href="/Layout/Sign-in.html">THÀNH VIÊN</a></div>
+        </div>
+    </header>
+    <nav>
+        <ul class="nav_menu">
+            <li style="border-bottom: 3px solid #09f; "><a style="color: #09f;" href=""><span class="span1">24</span>
+                    <span class="span2">/10-T5</span></a></li>
+            <li><a href="index2.html"><span class="span1">25</span> <span class="span2">/10-T6</span></a></li>
+            <li><a href="index3.html"><span class="span1">26</span> <span class="span2">/10-T7</span></a></li>
+            <li><a href="index4.html"><span class="span1">27</span> <span class="span2">/10-CN</span></a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <div class="phim1">
+            <div class="content1">
+                <img class="content1_1" id="img1" src="Logophim.jpg" alt="Ảnh phim">
+            </div>
+            <div class="content2">
+                <p class="content_tenPhim">VENOM: KÈO CUỐI</p>
+                <div class="content2_1">
+                    <span><i style="color: #09f;" class="fa-solid fa-tags"></i>Khoa học, viễn tưởng</span>
+                    <span><i style="color: #09f;" class="fa-solid fa-clock"></i>109 phút</span>
+                    <p style="color: rgb(58, 57, 57);font-weight: bold;font-size: 26px;margin: 5px">2D PHỤ ĐỀ</p>
+                    <div class="content2_1_1">
+                        <div class="content2_1_1_1">
+                            <p class="content2_1_1_1_1">20:00</p>
+                            <p>60 ghế trống</p>
+                        </div>
+                        <div class="content2_1_1_2">
+                            <p class="content2_1_1_1_1">22:00</p>
+                            <p>60 ghế trống</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr style="width: 80%;">
+        <div class="phim2">
+            <div class="content1">
+                <img class="content1_1" id="img2" src="AnhLogoPhim2.webp" alt="Ảnh phim">
+            </div>
+            <div class="content2">
+                <p class="content_tenPhim">NGÀY XƯA CÓ MỘT CHUYỆN TÌNH</p>
+                <div class="content2_1">
+                    <span><i style="color: #09f;" class="fa-solid fa-tags"></i>Tình cảm</span>
+                    <span><i style="color: #09f;" class="fa-solid fa-clock"></i>135 phút</span>
+                    <p style="color: rgb(58, 57, 57);font-weight: bold;font-size: 26px;margin: 5px">2D PHỤ ĐỀ</p>
+                    <div class="content2_1_1">
+                        <div class="content2_1_1_1">
+                            <p class="content2_1_1_1_1">18:00</p>
+                            <p>55 ghế trống</p>
+                        </div>
+                        <div class="content2_1_1_2">
+                            <p class="content2_1_1_1_1">22:00</p>
+                            <p>60 ghế trống</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="myVideo1" class="video1">
+        <!-- Nội dung Video1 -->
+        <div class="video-content1">
+            <span id="close1" class="close">&times;</span>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/b1Yqng0uSWM?si=HXGpeKHZjRqGrIZt"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div id="myVideo2" class="video2">
+        <!-- Nội dung Video2 -->
+        <div class="video-content2">
+            <span id="close2" class="close">&times;</span>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/IcpKkCzvcU4?si=f9pAblWWKcRqpiBv"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+    <!-- <script>
+        //Video1
+        var iframe1 = modal1.querySelector("iframe");
+        // Lấy modal
+        var modal1 = document.getElementById("myVideo1");
+
+        // Lấy nút mở modal
+        var btn1 = document.getElementById("img1");
+
+        // Lấy nút đóng modal
+        var span1 = document.getElementById("close1");
+
+        // Khi người dùng nhấn nút, modal sẽ hiện lên
+        btn1.onclick = function () {
+            modal1.style.display = "block";
+        }
+
+        // Khi người dùng nhấn vào nút "x", modal sẽ đóng
+        span1.onclick = function () {
+            modal1.style.display = "none";
+            iframe1.src = iframe1.src; // Đặt lại src để dừng video
+        }
+
+        // Khi người dùng nhấn ngoài vùng modal, modal sẽ đóng
+        window.onclick = function (event) {
+            if (event.target == modal1) {
+                modal1.style.display = "none";
+                iframe1.src = iframe1.src;
+            }
+        }
+
+        //Video2
+        // Lấy modal
+        var modal2 = document.getElementById("myVideo2");
+
+        // Lấy nút mở modal
+        var btn2 = document.getElementById("img2");
+
+        // Lấy nút đóng modal
+        var span2 = document.getElementById("close2");
+
+        // Khi người dùng nhấn nút, modal sẽ hiện lên
+        btn2.onclick = function () {
+            modal2.style.display = "block";
+        }
+
+        // Khi người dùng nhấn vào nút "x", modal sẽ đóng
+        span2.onclick = function () {
+            modal2.style.display = "none";
+        }
+
+        // Khi người dùng nhấn ngoài vùng modal, modal sẽ đóng
+        window.onclick = function (event) {
+            if (event.target == modal2) {
+                modal2.style.display = "none";
+            }
+        }
+    </script> -->
+    <script>
+        // Video 1
+        var modal1 = document.getElementById("myVideo1");
+        var btn1 = document.getElementById("img1");
+        var span1 = document.getElementById("close1");
+        var iframe1 = modal1.querySelector("iframe");
+
+        // Khi người dùng nhấn nút, modal sẽ hiện lên và video bắt đầu phát
+        btn1.onclick = function () {
+            modal1.style.display = "block";
+        }
+
+        // Khi người dùng nhấn vào nút "x", modal sẽ đóng và video dừng phát
+        span1.onclick = function () {
+            modal1.style.display = "none";
+            iframe1.src = iframe1.src; // Đặt lại src để dừng video
+        }
+
+        // Video 2
+        var modal2 = document.getElementById("myVideo2");
+        var btn2 = document.getElementById("img2");
+        var span2 = document.getElementById("close2");
+        var iframe2 = modal2.querySelector("iframe");
+
+        btn2.onclick = function () {
+            modal2.style.display = "block";
+        }
+
+        span2.onclick = function () {
+            modal2.style.display = "none";
+            iframe2.src = iframe2.src; // Đặt lại src để dừng video
+        }
+
+        // Khi người dùng nhấn ngoài vùng modal, modal sẽ đóng và video dừng phát
+        window.onclick = function (event) {
+            if (event.target == modal1) {
+                modal1.style.display = "none";
+                iframe1.src = iframe1.src;
+            } else if (event.target == modal2) {
+                modal2.style.display = "none";
+                iframe2.src = iframe2.src;
+            }
+        }
+    </script>
+    <div class="lastContent">
+        <h3 class="lastContent_Tittle">PHIM SẮP CHIẾU</h3>
+        <ul class="Content_lastContent">
+            <li>
+                <div class="phim1_Content_lastContent">
+                    <img class="anhPhim" src="AnhPhimTDQB.png" alt="Ảnh phim">
+                    <div class="textPhim">
+                        <p class="tenPhim"><a href="phimSapChieu1.html">Thiên Đường Quả Báo</a></p>
+                        <p class="theLoai">Kịch, Hồi Hộp</p>
+                        <p class="ngay">11/11/2024</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="phim1_Content_lastContent">
+                    <img class="anhPhim" src="AnhPhimHanhTrinhMoana.png" alt="Ảnh phim">
+                    <div class="textPhim">
+                        <p class="tenPhim"><a href="phimSapChieu2.html">Hành Trình Của Moana 2</a></p>
+                        <p class="theLoai">Phiêu lưu, Hoạt hình</p>
+                        <p class="ngay">22/11/2024</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- <footer>
+        <table>
+            <tr class="thead">
+                <td>Group3 Việt Nam</td>
+                <td>Điều khoản sử dụng</td>
+                <td>Kết nối với chúng tôi</td>
+                <td>Chăm sóc khách hàng</td>
+            </tr>
+            <tr class="tbody">
+                <td class="tbody_td1">
+                    <a href="" target="_self">Giới thiệu</a><br>
+                    <a href="" target="_self">Tiện Ích Online</a><br>
+                    <a href="" target="_self">Thẻ Quà Tặng</a><br>
+                    <a href="" target="_self">Tuyển Dụng</a><br>
+                    <a href="" target="_self">Liên Hệ Quảng Cáo Group3</a><br>
+                    <a href="" target="_self">Dành cho đối tác</a><br>
+                </td>
+                <td class="tbody_td2">
+                    <a href="" target="_self">Điều Khoản Chung</a><br>
+                    <a href="" target="_self">Điều Khoản Giao Dịch</a><br>
+                    <a href="" target="_self">Chính Sách Thanh Toán</a><br>
+                    <a href="" target="_self">Chính Sách Bảo Mật</a><br>
+                    <a href="" target="_self">Câu Hỏi Thường Gặp</a><br>
+                </td>
+                <td class="tbody_td3">
+                    <a href="https://www.facebook.com/profile.php?id=100051846793935" target="_blank"><i id="icon_fb"
+                            class="fa-brands fa-square-facebook"></i></a>
+                    <i id="icon_yt" class="fa-brands fa-square-youtube"></i>
+                    <i id="icon_ins" class="fa-brands fa-square-instagram"></i>
+                    <i id="icon_tw" class="fa-brands fa-square-x-twitter"></i>
+                </td>
+                <td class="tbody_td4">
+                    <p>
+                        Hotline: 1900 6017<br>
+                        Giờ làm việc: 8:00 - 22:00 (Tất cả các ngày<br>
+                        bao gồm cả Lễ Tết)<br>
+                        Email hỗ trợ: hoidap@group3.vn
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </footer> -->
+    <!-- <div class="footer_container">
+        <div class="inner_footer">
+            <div class="footer_group">
+                <h2>Group3 Việt Nam</h2>
+                <div class="list_links">
+                    <a href="" target="_self">Giới thiệu</a><br>
+                    <a href="" target="_self">Tiện Ích Online</a><br>
+                    <a href="" target="_self">Thẻ Quà Tặng</a><br>
+                    <a href="" target="_self">Tuyển Dụng</a><br>
+                    <a href="" target="_self">Liên Hệ Quảng Cáo Group3</a><br>
+                    <a href="" target="_self">Dành cho đối tác</a><br>
+                </div>
+            </div>
+            <div class="footer_group">
+                <h2>Điều khoản sử dụng</h2>
+                <div class="list_links">
+                    <a href="" target="_self">Điều Khoản Chung</a><br>
+                    <a href="" target="_self">Điều Khoản Giao Dịch</a><br>
+                    <a href="" target="_self">Chính Sách Thanh Toán</a><br>
+                    <a href="" target="_self">Chính Sách Bảo Mật</a><br>
+                    <a href="" target="_self">Câu Hỏi Thường Gặp</a><br>
+                </div>
+            </div>
+            <div class="footer_group">
+                <h2>Kết nối với chúng tôi</h2>
+                <div class="list_links">
+                    <a href="https://www.facebook.com/profile.php?id=100051846793935" target="_blank"><i id="icon_fb"
+                            class="fa-brands fa-square-facebook"></i></a>
+                    <i id="icon_yt" class="fa-brands fa-square-youtube"></i>
+                    <i id="icon_ins" class="fa-brands fa-square-instagram"></i>
+                    <i id="icon_tw" class="fa-brands fa-square-x-twitter"></i>
+                </div>
+            </div>
+            <div class="footer_group">
+                <h2>Chăm sóc khách hàng</h2>
+                <div class="list_links">
+                    <p>
+                        Hotline: 1900 6017<br>
+                        Giờ làm việc: 8:00 - 22:00 (Tất cả các ngày<br>
+                        bao gồm cả Lễ Tết)<br>
+                        Email hỗ trợ: hoidap@group3.vn
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column footer-introduce">
+                <h3>Group3 Việt Nam</h3>
+                <div><i class="fa-solid fa-arrow-right"></i><a href="#" target="_self">Giới thiệu</a></div>
+                <div><i class="fa-solid fa-arrow-right"></i><a href="#" target="_self">Tiện Ích Online</a></div>
+                <div><i class="fa-solid fa-arrow-right"></i><a href="#" target="_self">Thẻ Quà Tặng</a></div>
+                <div><i class="fa-solid fa-arrow-right"></i><a href="#" target="_self">Tuyển Dụng</a></div>
+                <div><i class="fa-solid fa-arrow-right"></i><a href="#" target="_self">Liên Hệ Quảng Cáo Group3</a>
+                </div>
+                <div><i class="fa-solid fa-arrow-right"></i><a href="#" target="_self">Dành cho đối tác</a></div>
+            </div>
+
+            <div class="footer-column footer-introduce">
+                <h3>Điều khoản sử dụng</h3>
+                <div><i class="fa-solid fa-arrow-right"></i><a href="#" target="_self">Điều Khoản Chung</a></div>
+                <div><i class="fa-solid fa-arrow-right"></i><a href="#" target="_self">Điều Khoản Giao Dịch</a></div>
+                <div><i class="fa-solid fa-arrow-right"></i><a href="#" target="_self">Chính Sách Thanh Toán</a></div>
+                <div><i class="fa-solid fa-arrow-right"></i><a href="#" target="_self">Chính Sách Bảo Mật</a></div>
+                <div><i class="fa-solid fa-arrow-right"></i><a href="#" target="_self">Câu Hỏi Thường Gặp</a></div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Kết nối với chúng tôi</h3>
+                <i id="inner-icon-facebook" class="fa-brands fa-square-facebook"></i>
+                <i id="inner-icon-youtobe" class="fa-brands fa-square-youtube"></i>
+                <i id="inner-icon-instagram" class="fa-brands fa-square-instagram"></i>
+                <i id="inner-icon-twitter" class="fa-brands fa-square-x-twitter"></i>
+            </div>
+
+            <div class="footer-column">
+                <h3>Chăm sóc khách hàng</h3>
+                <p>
+                    Hotline: 1900 6017<br>
+                    Giờ làm việc: 8:00 - 22:00 (Tất cả các ngày<br>
+                    bao gồm cả Lễ Tết)<br>
+                    Email hỗ trợ: hoidap@group3.vn
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
